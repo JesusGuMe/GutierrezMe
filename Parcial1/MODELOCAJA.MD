@@ -14,3 +14,4 @@ Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
 - El **margen de la caja o margin box**: El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad *margin* y otras propiedades relacionadas.  
 
 El diagrama siguiente muestra estas capas:  
+![Partes de la caja] (C:\Users\CARLOS\OneDrive\Pictures\Diagrama Caja de Modelo.png)
