@@ -22,7 +22,7 @@ table {
 }
 
 
-tr:nth-of-type(odd) { /* Estilo Zebra para las filas */
+tr:nth-of-type(odd) { 
 	background: white;
 }
 

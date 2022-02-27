@@ -1,15 +1,11 @@
 @media only screen and (max-width: 800px) 
     {
-		/* Cambiar el display de los elementos de tabla a block */
-		/*----------------------------------------------------- */
 		table, thead, tbody, th, td, tr {
 			display: block;
 		}
 
         tr { border: 1px solid black; }
 
-		/* Esconder los encabezados de la tabla */
-		/*------------------------------------- */
 		thead tr {
 			position: absolute;
 			top: -9999px;
@@ -17,8 +13,8 @@
 		}
 
 		td {
-			position: relative;      /* Cada campo ahora sera una fila*/
-			padding-left: 60%;       /* hacemos espacio para "encabezado de cada fila" */
+			position: relative;      
+			padding-left: 60%;       
 			border: solid black;
 			border-bottom: 1px solid black;
 		}
