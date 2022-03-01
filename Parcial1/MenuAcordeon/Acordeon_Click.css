@@ -34,3 +34,30 @@ a { color: white;
     background: gray;
     color: white;
 }
+
+/* Intento con lo relacionado a transición*/
+#opc1:hover
+{
+    width: 700px;
+}
+
+#opc2:hover
+{
+    width: 700px;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    transition-delay: 2s;
+}
+
+#opc3:hover
+{
+    background-color: blueviolet;
+    transition: background-color 2s ease-out;
+}
+
+#opc4:hover
+{
+    background-color: green;
+    transition: background-color 2s ease-out;
+}

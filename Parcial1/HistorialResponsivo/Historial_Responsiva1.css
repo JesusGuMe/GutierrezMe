@@ -20,7 +20,7 @@
 		}
 
 		td:before {
-			position: absolute;    /* Encabezados */
+			position: absolute;    
 			top: 6px;
 			left: 6px;
 			width: 60%;
