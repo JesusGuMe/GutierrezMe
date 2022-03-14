@@ -22,12 +22,14 @@ Un área del documento que contiene un flexbox es llamada contendedor flex. Para
     - *row (estándar)*: de la izquierda a la derecha en ltr (left to right), de la derecha a la izquierda en rtl (right to left).
     - *row-reverse*: de la derecha a la izquierda en ltr, de la izquierda a la derecha en rtl.
     - *column*: mismo que row, pero de arriba a abajo.
-    - *column-reverse*: mismo que row-reverse pero de abajo hacia arriba.
+    - *column-reverse*: mismo que row-reverse pero de abajo hacia arriba.  
+![FlexDirection](https://camo.githubusercontent.com/9ece155a18899ad915ccef5da80f618006b82c49277beea200e22c1f70d966da/68747470733a2f2f6373732d747269636b732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f31302f666c65782d646972656374696f6e2e737667)
 
 - ***flex-wrap***: Por estándar, los flex ítems todos intentarán encajarse en una sola línea. Con esta propiedad puedes modificar este comportamiento y permitir que los ítems pasen a la siguiente línea según sea necesario.
   - *nowrap (estándar)*: todos los flex ítems estarán en una sola línea.
   - *wrap*: los flex ítems se dividirán en múltiples líneas, de arriba a abajo.
   - *wrap-reverse*: los flex ítems se dividirán en múltiples líneas de abajo hacia arriba.
+![FlexWrap](https://camo.githubusercontent.com/fd3727f675a455a68ce92ed75cf57ff202447fd18f730f7978b80a3bb0e79638/68747470733a2f2f6373732d747269636b732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f31302f666c65782d777261702e737667)
 
 - ***flex-flow***: La propiedad flex-flow es una propiedad shorthand (una misma declaración incluye varios valores relacionados con más de una propiedad) que incluye flex-direction y flex-wrap. Determina cuáles serán los ejes principal y transversal del contenedor. El valor estándar es row nowrap.
 
@@ -42,6 +44,7 @@ Un área del documento que contiene un flexbox es llamada contendedor flex. Para
   - *Space-between*: los ítems se distribuyen uniformemente a lo largo de la línea; el primer ítem al lado del borde inicial de la línea, el último ítem al lado del borde final de la línea.
   - *Space-around*: los ítems se distribuyen en línea con el mismo espacio entre ellos. 
   - *Space-evenly*: los ítems se distribuyen de manera que el espacio entre dos elementos cualesquiera en la línea (incluso entre los ítems y los bordes) sea igual. 
+![JustifyContent](https://camo.githubusercontent.com/99c142d1b528f7c33757152139ff8131358dc3ddb77eb3b2a6fc9a044d2bb53e/68747470733a2f2f6373732d747269636b732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f31302f6a7573746966792d636f6e74656e742e737667)
 
 - ***Align-ítems***: Establece el comportamiento estándar de cómo flex ítems están alineados según el eje transversal (cross axis). En cierto modo, funciona de manera similar al justify-content, pero en el eje transversal (perpendicular al eje principal).
     - *Stretch (estándar)*: estira los ítems para llenar el contenedor, respetando el min-width/max-width).
@@ -49,6 +52,7 @@ Un área del documento que contiene un flexbox es llamada contendedor flex. Para
     - *center*: ítems se centran en el eje transversal.
     - *baseline*: ítems se alinean de acuerdo con sus baselines.
 Los modificadores safe y unsafe se puede usar junto con todas estas palabras clave y sirven para evitar cualquier alineación de elementos que haga con que el contenido sea inaccesible.
+![AlignItems](https://camo.githubusercontent.com/6a31df6631678ba5686f4ec6203cd74c094924517b8b8a1f21981f26fb21eccf/68747470733a2f2f6373732d747269636b732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f31302f616c69676e2d6974656d732e737667)
 
 - ***Align-content***: Organiza las líneas dentro de un flex container cuando hay espacio adicional en el eje transversal, similar a cómo justify-content alinea ítems individuales dentro del eje principal. Esta propiedad no tiene efecto cuando solo hay una línea de flex ítems en el contenedor.
     - *flex-start / start*: ítems alineados con el inicio del contenedor. El valor  flex-start se guía por la flex-direction. 
@@ -58,6 +62,7 @@ Los modificadores safe y unsafe se puede usar junto con todas estas palabras cla
     - *space-around*: ítems distribuidos uniformemente con el mismo espaciamiento entre cada línea.
     - *space-evenly*: elementos distribuidos uniformemente con el mismo espaciamiento entre ellos.
     - *stretch (estándar)*: ítems en cada línea se estiran para ocupar el espacio remanente entre ellas.
+![AlignContent](https://camo.githubusercontent.com/b3b9b868dc5b3bbb69ecd7ea7a950f7b33ca346d4c761d555717ec8b340bb966/68747470733a2f2f6373732d747269636b732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f31302f616c69676e2d636f6e74656e742e737667)
 
 **Propiedades de los elementos secundarios**   
 A continuación, veremos propiedades que deben declararse teniendo como selector los elementos secundarios, es decir:
@@ -66,14 +71,21 @@ A continuación, veremos propiedades que deben declararse teniendo como selector
 3
 Esto significa que, donde hay un elemento principal con propiedad flex (o flex-container), también puede asignar propiedades flex específicas a elementos secundarios (flex-ítem).
 - *order*: Determina el orden en que aparecerán los elementos. Por estándar los flex ítems, se organizan en la pantalla en orden de código. Pero la propiedad order controla el orden en que aparecen en el contenedor.
+![order](https://camo.githubusercontent.com/0a50368a4fd1553a70dfebf0937b7caf8354a83cae32097c2229822a277e3f08/68747470733a2f2f6373732d747269636b732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f31302f6f726465722e737667)   
+
 - *Flex-grow*: Define la habilidad de un flex ítem de crecer, según el caso. El valor de esta propiedad es un valor numérico sin indicación de unidad, que se utiliza para calcular la proporción. Este valor dicta la cantidad de espacio disponible en el contenedor que ocupará el ítem.
+![grow](https://camo.githubusercontent.com/79e51e3724731b3f5f1597aaad21f9820bebcd30dcbe4c6ae546499694381b1e/68747470733a2f2f6373732d747269636b732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f31302f666c65782d67726f772e737667)
+
 - *flex-shrink*: Establece la habilidad de un flex ítem para contraerse, según el caso. La propiedad no acepta valores negativos.
 - *flex-basis*: Establece el tamaño estándar de un elemento antes de que se distribuya el espacio remanente del contenedor. La palabra clave *auto* significa "observe mis propiedades de altura o ancho". La palabra clave *content* significa "establezca el tamaño según el contenido interno del ítem".   
 - *flex*: Esta es la propiedad shorthand para flex-grow, flex-shrink y flex-basis, combinadas. El segundo y tercer parámetros (flex-shrink y flex-basis) son opcionales. El estándar es 0 1 auto, pero si lo defines con un solo número, es equivalente a 0 1.
 
+
 - ***align-self***: Permite que la alineación estándar (o lo que esté definido por align-items) se sobrescriba para ítems individuales.
+![alignself](https://camo.githubusercontent.com/634a0654d355ea5af43d1bd868604176e01f726de196c4868dc0e0b80f3eee1f/68747470733a2f2f6373732d747269636b732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f31302f616c69676e2d73656c662e737667)
 
 **Huecos (gaps)**   
 Existen dos propiedades de flexbox que han surgido recientemente: row-gap y column-gap. Dichas propiedades, permiten establecer el tamaño de un «hueco» entre ítems desde el elemento padre contenedor, y sin necesidad de estar utilizando padding o margin en los elementos hijos.
 - *row-gap*: Espacio entre filas (sólo si flex-direction: column)
-- *column-gap*: Espacio entre columnas (sólo si flex-direction: row)
+- *column-gap*: Espacio entre columnas (sólo si flex-direction: row)   
+![gaps](https://www.gb-creations.net/static/676c2ea226b7217f65ed34fc19e2b816/34e8a/gaps.png)
