@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width:100vw;
+    height:100vh;
+    background-color: blue;
+    display:grid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 35% 35% 10%;
+    grid-template-areas: 'header header'
+                         'section section2'
+                         'section3 section4'
+                         'footer footer';
+                        
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.caja {
+    background-color: gold;
+    text-align: center;
+    border: 3px solid red;
+}
+
+#header {
+    grid-area: header;
+    font-style: oblique;
+    font-size: 13mm;
+    background-color: azure;
+    background-image: url(https://st.depositphotos.com/1522993/4737/v/600/depositphotos_47372005-stock-illustration-orange-blue-background-with-triagles.jpg);
+}
+
+#section {
+    grid-area: section;
+    font-size: 9.6mm;
+    font-style: italic;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/004/575/494/small/3d-gray-background-product-display-podium-scene-with-leaf-geometric-platform-grey-background-3d-render-with-podium-stand-to-show-cosmetic-product-stage-showcase-on-pedestal-display-white-vector.jpg);
+    background-color: blueviolet;
+}
+
+#section2 {
+    grid-area: section2;
+    background-color: aquamarine;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 9mm;
+    font-style: italic;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDEQR0SDxfTSD75C7gQUaYRr2Tn4v_sDO7wMUSeFK9xF33VKIwTXfQRHWwYHjbChgT9Y8&usqp=CAU);
+
+}
+#section3 {
+    grid-area: section3;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 8mm;
+    font-style: italic;
+    background-image: url(https://images.freeimages.com/images/large-previews/ce9/white-background-1639851.png);
+}
+#section4 {
+    grid-area: section4;
+    background-color: darkorange;
+}
+
+#footer {
+    grid-area: footer;
+}
