@@ -13,10 +13,10 @@
     font-size: x-large;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 35% 35% 10%;
-    grid-template-areas: 'header header'
-                         'section section2'
-                         'section3 section4'
-                         'footer footer';
+    grid-template-areas: 'titulo titulo'
+                         'seccion seccion2'
+                         'seccion3 seccion4'
+                         'piepagina piepagina';
                         
     justify-content: center;
     align-content: center;
@@ -29,43 +29,58 @@
     border: 3px solid red;
 }
 
-#header {
-    grid-area: header;
+#titulo {
+    grid-area: titulo;
     font-style: oblique;
     font-size: 13mm;
     background-color: azure;
     background-image: url(https://st.depositphotos.com/1522993/4737/v/600/depositphotos_47372005-stock-illustration-orange-blue-background-with-triagles.jpg);
 }
 
-#section {
-    grid-area: section;
+#seccion1 {
+    grid-area: seccion;
     font-size: 9.6mm;
     font-style: italic;
-    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/004/575/494/small/3d-gray-background-product-display-podium-scene-with-leaf-geometric-platform-grey-background-3d-render-with-podium-stand-to-show-cosmetic-product-stage-showcase-on-pedestal-display-white-vector.jpg);
+    background-image: url(https://media.istockphoto.com/videos/animated-paper-backgrounds-cartoon-nature-video-id938105152?s=640x640);
     background-color: blueviolet;
 }
 
-#section2 {
-    grid-area: section2;
+#seccion2 {
+    grid-area: seccion2;
     background-color: aquamarine;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 9mm;
     font-style: italic;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDEQR0SDxfTSD75C7gQUaYRr2Tn4v_sDO7wMUSeFK9xF33VKIwTXfQRHWwYHjbChgT9Y8&usqp=CAU);
+    background-image: url(https://media.gettyimages.com/videos/abstract-simple-and-beautiful-gray-background-soft-blurred-motion-video-id1284791936?s=640x640);
 
 }
-#section3 {
-    grid-area: section3;
+#seccion3 {
+    grid-area: seccion3;
     font-family: 'Times New Roman', Times, serif;
     font-size: 8mm;
     font-style: italic;
-    background-image: url(https://images.freeimages.com/images/large-previews/ce9/white-background-1639851.png);
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ8NDQ0NFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zOEEtNygtLjcBCgoKDQ0NDw0NDzcZFRkrKyswKy0rKystLSsrKystKystKysrLSsrKysrKysyKysrKzMrKzErKy03LS0rKy0rN//AABEIAKgBLAMBEQACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAABAAIFA//EACoQAQABAwEFCAMBAAAAAAAAAAABAgMRFAQhMVFTIzNBYXGBkeGhsdET/8QAGgEBAQACAwAAAAAAAAAAAAAAAAECBQMGB//EACMRAQABAwMEAwEAAAAAAAAAAAABAgNSERMUBCMzUyExQRL/2gAMAwEAAhEDEQA/AOu7O8vIhQIiQIhRCBESBRCBBCFAghECAgAQIAKlAKAQBVABVAJVEihQCiVAKoAwIUEIQKIUQghCgQKIgIhBIEEIgQIEAFSgFQAAqoAAVQAVQKFBIoUQohRqERIEQgYRCBREIUCCEKBBAREgQQiBCgEoAQoBAJVQAVUAFCgFCgkUKAVKFEIFEIFEQFEIJEIEQoICCEIJBKIECAAhQCAAlUAFUAlUCiVAKJASqgFChQIhQQhQIhBIhAohBCFBAQQiFQERABUABAgCqASqACqAAqlQChQChVAGEQiFAiECiICIkDCIQIIQgkCCBAgQAECAKIUAgCqASqACqJAChVABVQGBCgREgRCgREBRCCEKBBCEEggQIECAKIEKAQBVAJVAAVKAUAFUKoBKJAwiEQgUEIQKIgKIQQhQQEECEQIECFQIACUAqAKoACpQAJFCqACqFVAUQiFBCFAiICBREBRCCAiIEgQQIEABAlUAgAJVAAVKAAKlAKJVQAVUCRCBEKCEKBEQFAiICCRCCAghECBABUCBABUoAAqUAoBAJVQoBRKqAQECiICIUEIUCCEKCEIEEghCCBAgQIEAFQBRCgEoAAqUAoAKoBKoAKpRCBREBEKCEIJAiEEBREBBAgQIRCoEABCgEoAQoBKoAKCRUAVQAVUCAohAoiAiJAiICgQQhBIEEIgQIECBCgEogAIUAFVAASqJAKoACpQAQIJEIJEIERIEEIQSBBCEECBIJRAgQAECFAJQCgEAVUAlVACRUoBUCEIEEiEEiEEBESBBCFBAQQLIiBAgQqAAgQBRCgEqgEAVRIAVSoBQogKCEIICiICCRCCAiJAghCCBIIECUQIEAFQAEqgEABKoBChQCgEoBSIUEIgMAURAgIiQIICIkCCBAgQIRCoACUQoBABUoAQoBSoBQCUAqUSBEQFBCEEBREBBCJAggIIECEQIEKgAIEABKoBABUogEigEoBUAVSiICCEQFEQEEBRECAggSIQWQQIECBAFEipQAgQoUQAVAASqACiyKgQiAoICIgSBBCEECQIiAggQIECBAAQIEKASgBCoACUAqAAlUAgQEEIgKCAiIEgQQiAggQFBCIVCIEqoAD12S3FdyiieFU7/AE4sLlX80zVDm6e3Fy7TRP1LuVbFajhZpn3/AL7NfvV5t5PSWY+rMStFa39jR5czerzXiWfnswtFa6MfjP7N2vM4tj0jRW8z2NvG/G+crvV5nEtaz2o0E7Fb3Ys2/PMyb1ecnEtflqBoreZj/CjG/E548jeqzTi2tZ7MaCdjox3FuZz4VeHNd6rNJ6W3EeGGtFaz3FPrnhw+03q82XFs+mBorWe5ox9G9XmcW1r4YFGxW5zmxRHLfnKzer/LhT0tqddbMQtFa6FGc8PL5N6vM4trTxQtDb6FHh4/JvV5nFtemG9BY6VHwm9cyZ8Ox64f/9k=);
 }
-#section4 {
-    grid-area: section4;
+#seccion4 {
+    grid-area: seccion4;
     background-color: darkorange;
+    background-image: url(https://previews.123rf.com/images/zven0/zven02008/zven0200800003/153014954-white-background-with-smooth-lines.jpg);
 }
 
-#footer {
-    grid-area: footer;
+#piepagina {
+    grid-area: piepagina;
+    background-image: url(https://www.smithdoria.com/wp-content/uploads/2018/08/background-1140x200.png);
+}
+
+@media screen and (max-width: 900px) {
+    .contenedor {
+        grid-template-columns: 100%;
+        grid-template-rows: 16% 17% 17% 17% 17% 16%;
+        grid-template-areas: 'titulo'
+                             'seccion' 
+                             'seccion2'
+                             'seccion3' 
+                             'seccion4'
+                             'piepagina';
+    }
 }
