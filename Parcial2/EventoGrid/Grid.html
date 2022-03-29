@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Sesión de clase</title>
+    <link rel="stylesheet" href="Grid.css">
+</head>
+<body>
+    <div id=idContenedor class="contenedor">
+        <div id="caja1" class="caja">CAJA NUMERO 1</div>
+        <div id="caja2" class="caja">CAJA NUMERO 2</div>
+        <div id="caja3" class="caja">CAJA NUMERO 3</div>
+        <div id="caja4" class="caja">CAJA NUMERO 4</div>
+        <div id="caja5" class="caja">CAJA NUMERO 5</div>
+        <div id="caja6" class="caja">CAJA NUMERO 6</div>
+    </div>
+    <script>
+        window.onload = function() {
+            document.getElementById("idContenedor").addEventListener("click", function(evento) { 
+                console.log(evento.target.id);
+                document.getElementById(evento.target.id).classList.toggle("nuevacaja");
+            })
+        }
+    </script>
+</body>
+</html>
