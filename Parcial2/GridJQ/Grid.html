@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid con JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Grid.css">
+</head>
+<body>
+    <div id=idContenedor class="contenedor">
+        <div id="caja1" class="caja">CAJA NUMERO 1</div>
+        <div id="caja2" class="caja">CAJA NUMERO 2</div>
+        <div id="caja3" class="caja">CAJA NUMERO 3</div>
+        <div id="caja4" class="caja">CAJA NUMERO 4</div>
+        <div id="caja5" class="caja">CAJA NUMERO 5</div>
+        <div id="caja6" class="caja">CAJA NUMERO 6</div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#idContenedor').click(function(e) {
+                console.log(e);
+                $(e.target).toggleClass("nuevacaja");
+            });
+        });
+    </script>
+</body>
+</html>
