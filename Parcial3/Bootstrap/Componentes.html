@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <form class="form">
+            <h1>Formulario </h1>
+          <div class="row">
+              <div class="form-group col-sm-12 col-md-12 col-lg-8">
+                    <label for="Titulo" class="control-label">Titulo de la Materia</label>
+                    <input id="Titulo" type="text" class="form-control" placeholder="Nombre de la materia"/>
+              </div>
+              <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                    <label for="idClave">Clave de la materia</label>
+                    <input id="idClave" type="text" class="form-control" placeholder="Ej.16785ABC"/>
+              </div>
+              <div class="form-group col-sm-12 col-md-8 col-lg-12">
+                  <label for="carrera">Carrera</label>
+                  <input id="carrera" type="text" class="form-control" placeholder="Carrera de la materia"/>
+              </div>
+          </div>
+    
+          <div class="row">
+             <div class="form-group col-sm-12 col-md-8 col-lg-8">
+                  <label for="nomEscuela">Nombre de la Institución</label>
+                  <input id="nomEscuela" type="text" class="form-control" placeholder="Nombre de la escuela donde se impartira"/>
+             </div>     
+              <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                  <label for="Tipo">Escuela...</label>
+                  <select class="form-control" id="Tipo">
+                  <option>Publica</option>
+                  <option>Privada</option>
+                  </select>
+              </div>
+          </div>
+    
+    
+          <div class="row">
+                <div class="form-group col-sm-12 col-md-6 col-lg-4">
+                      <label for="ciudad">Ciudad</label>
+                      <input id="ciudad" type="text" class="form-control" placeholder="Nombre de la Ciudad"/>
+                </div>
+                <div class="form-group col-sm-12 col-md-6 col-lg-4">
+                      <label for="estado">Estado</label>
+                      <input id="estado" type="text" class="form-control" placeholder="Nombre del Estado"/>
+                </div>
+                <div class="form-group col-sm-12 col-md-12 col-lg-4">
+                      <label for="pais">Pais</label>
+                      <input id="pais" type="text" class="form-control" placeholder="Nombre del Pais"/>
+                </div>
+          </div>
+          <div class="row">
+                  <div class="form-group col-sm-12 col-md-6 col-lg-4">
+                  <label for="semestre">Semestre</label>
+                  <select class="form-control" id="semestre">
+                  <option>1ro</option>
+                  <option>2do</option>
+                  <option>3ro</option>
+                  <option>4to</option>
+                  <option>5to</option>
+                  <option>6to</option>
+                  <option>7mo</option>
+                  <option>8vo</option>
+                  </select>
+                  </div>
+                  <div class="form-group col-sm-12 col-md-6 col-lg-8">
+                        <label for="grupos">Grupos</label>
+                        <input id="grupos" type="text" class="form-control" placeholder="Cantidad de grupos"/>
+                  </div>
+                 
+                  
+            </div>
+            <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                  <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                        <label class="custom-file-label" for="customFileLang">Subir Libro en .pdf de la Materia</label>
+                        
+                  </div>
+            </div>
+          <button id="btn1" type="registrar" class="btn-btn-primary">Boton 1</button>
+          <button id="btn2"type="reiniciar" class="btn-btn-default" data-toggle="modal" data-target="#exampleModal"> Boton 2</button>
+          <button id="btn3" type="boton" class="btn-btn-primary">Boton 3</button>
+          
+          <div id="alerta1" class="alert alert-primary alert-dismissible collapse" role="alert">
+                <P>ENCABEZADO DE LA ALERTA</P>
+                <p>En esta seccion va el contenido de la alerta!!!</p> 
+                <button id="btncloseAlert" type="button" class="close"  aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            
+              
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">TITULO DEL MODAL!!</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                    EN ESTA SECCION VA EL CONTENIDO O CUERPO DEL MODAL...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                    </div>
+                  </div>
+                </div>
+            <Script>
+                $(document).ready(function() {
+                    $('#btn1').click(function() {
+                        $('#alerta1').show();
+                        console.log("Ha saltado la alerta");
+                    });
+                    $('#btncloseAlert').click(function(){
+                        $('#alerta1').hide();
+                        console.log("Se ha cerrado/ocultado la alerta");
+                    });
+                    $('#btn2').click(function() {
+                        console.log("Se hizo click en el Boton 2 y se muestra el modal sin JS");
+                    });
+                    $('#btn3').click(function() {
+                        $('#exampleModal').modal();
+                        console.log("Se muestra el modal con JS")
+                    });
+                });
+            </Script>
+        </form>
+    <div>
+</body>
+</html>
