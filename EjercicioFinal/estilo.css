@@ -1,12 +1,12 @@
 .container {
-    background-color: aqua;
-    border-radius: 10px;
+    border-radius: 12px;
     border-style: double;
     border-width: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-button {
-    background-color: coral;
-    font-style: oblique;
+.row {
+    border-radius: 12px;
+    border-style: groove;
+    border-width: 10px;
 }

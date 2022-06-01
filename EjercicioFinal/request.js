@@ -1,19 +1,29 @@
 $(document).ready(function() {
-    $('#btnConsultaBD').click(function() {
-        let parid=prompt("Teclee el ID a consultar");
+  
+  $('#btnConsultaBD').click(function() {
+      $('#ModalConsultar').modal();
 
-        $.post('php/conectar.php',{par1:parid},function(data){
+
+      
+  });
+    $('#consultar').click(function() {
+        let varid= $('#Consultar2').val();
+
+
+        $.post('php/conectar.php',{par1:varid},function(data){
           refrescar(data);
           },'json');
+          $('#ModalConsultar').modal('hide');
     });
+
+    
     
     function refrescar(objeto) {
         console.log(objeto);
-        $('#Titulo').val(objeto.Titulo);
         $('#idClave').val(objeto.idClave);
+        $('#Titulo').val(objeto.Titulo);
         $('#carrera').val(objeto.carrera);
         $('#nomEscuela').val(objeto.nomEscuela);
-        $('#Tipo').val(objeto.Tipo);
         $('#ciudad').val(objeto.ciudad);
         $('#estado').val(objeto.estado);
         $('#pais').val(objeto.pais);
@@ -21,64 +31,76 @@ $(document).ready(function() {
         $('#grupos').val(objeto.grupos);
         $('#alumnos').val(objeto.alumnos);
   }
-});
 
-$(document).ready(function() {
-    document.getElementById("btnFetch").addEventListener("click", function() {
-        let promesa = fetch('php/Json.php');
-        promesa.then(respuesta => respuesta.json() ).then(datos => console.log(datos));
-    });
-});
+  $('#btnEliminarBD').click(function() {
+    let varid = $('#idClave').val();
+    Swal.fire({
+      title: '¿Estas seguro?',
+      text: "Esta acción no se podra revertir!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, eliminar!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Eliminado!',
+          'Se ha eliminado el registro correctamente.',
+          'success'
+        )
+      }
+    })
 
-$(document).ready( function() {
-    $("#btnAJAX").click(ajaxFunction);
+    $.post('php/Borrar.php',{par1:varid});
+  });
 
-    function ajaxFunction() {
+  $('#btnRegistrarBD').click(function() {
+    let Clave = $('#idClave').val();
+    let Titul = $('#Titulo').val();
+    let Carrer = $('#carrera').val();
+    let Nomescuela = $('#nomEscuela').val();
+    let City = $('#ciudad').val();
+    let Estado = $('#estado').val();
+    let Pais = $('#pais').val();
+    let Semestre = $('#semestre').val();
+    let Grupo = $('#grupos').val();
+    let Alumno = $('#alumnos').val();
+
+    $.post('php/Ingresar.php',{Ic:Clave, Ti:Titul, Car:Carrer, Nom:Nomescuela, Cid:City, Est:Estado, Ps: Pais, Sem: Semestre, Grp:Grupo, Alumn:Alumno});
+  });
+
+  $('#btnEditarBD').click(function() {
+    let Clave = $('#idClave').val();
+    let Titul = $('#Titulo').val();
+    let Carrer = $('#carrera').val();
+    let Nomescuela = $('#nomEscuela').val();
+    let City = $('#ciudad').val();
+    let Estado = $('#estado').val();
+    let Pais = $('#pais').val();
+    let Semestre = $('#semestre').val();
+    let Grupo = $('#grupos').val();
+    let Alumno = $('#alumnos').val();
+
+    Swal.fire({
+      title: '¿Estas seguro de Modificar el Registro?',
+      text: "Esta acción no se podra revertir!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, quiero modificarlo!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Actualizado!',
+          'Se ha Actualizado el registro correctamente.',
+          'success'
+        )
+        $.post('php/Actualizar.php',{Ic:Clave, Ti:Titul, Car:Carrer, Nom:Nomescuela, Cid:City, Est:Estado, Ps: Pais, Sem: Semestre, Grp:Grupo, Alumn:Alumno});
+      }
+    })
+
     
-        var ajaxRequest;
-        ajaxRequest = new XMLHttpRequest();
-    
-    
-        ajaxRequest.onreadystatechange = function() {
-            if (ajaxRequest.readyState == 4)                                
-            { document.getElementById("resultado").innerHTML = ajaxRequest.responseText; } 
-        };
-    
-        ajaxRequest.open("GET","php/ajax.php",true);  
-        ajaxRequest.send();                                  
-    }
-
+  });
 });
-$(document).ready(function() {
-    $('#btnCambiaHeaderP').click(function() {
-        new Promise(function(resolve, reject) { 
-            var solicitud = new XMLHttpRequest();
-            solicitud.onreadystatechange = function() {
-                if(solicitud.readyState == 4 && solicitud.status == 200) {
-                    resolve(solicitud.responseText);
-                }
-            };
-            solicitud.open("GET", "encabezado.txt", true);
-            solicitud.send();
-        }).then(value => document.getElementById("header").innerHTML = value);
-        
-    });
-});
-
-$(document).ready(function() {
-$('#btnjson').click(function() {
-  $.post('php/Json.php',{},function(data){
-
-        console.log(data);
-        $('#Titulo').val(data.Titulo);
-        $('#idClave').val(data.idClave);
-        $('#carrera').val(data.carrera);
-        $('#nomEscuela').val(data.nomEscuela);
-        $('#grupos').val(data.grupos);
-        $('#alumnos').val(data.alumnos);
-        $('#ciudad').val(data.ciudad);
-        $('#estado').val(data.estado);
-        $('#pais').val(data.pais);
-
-    },'json');
-});});
